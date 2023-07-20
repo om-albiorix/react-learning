@@ -1,9 +1,10 @@
 .logoImg {
-  width: 100%;
-  height: auto;
-  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 500px;
 }
-.body {
+body {
   background-color: rgb(244, 239, 230);
 }
 .menu_item {
@@ -16,6 +17,29 @@
   margin: auto;
 }
 .main-image {
-  width: 50%;
-  padding: 10px;
+  width: 100%;
+  padding: 30px;
+}
+.main-title {
+  margin-bottom: 50px;
+}
+.menu-title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.main-bodypart {
+  display: grid;
+  place-items: center;
+}
+.italic {
+  font-style: italic;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.sold-out {
+  opacity: 0.1;
+}
+.bold {
+  font-weight: bolder;
 }
