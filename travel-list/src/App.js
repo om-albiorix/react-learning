@@ -1,40 +1,43 @@
 import { useState } from "react";
 
-const intialItems = [
-  {
-    Id: 1,
-    description: "Passport",
-    quantity: 2,
-    packed: false,
-  },
-  {
-    Id: 2,
-    description: "Shocks",
-    quantity: 2,
-    packed: false,
-  },
-  {
-    Id: 3,
-    description: "Cloths",
-    quantity: 2,
-    packed: false,
-  },
-  {
-    Id: 4,
-    description: "Snacks",
-    quantity: 2,
-    packed: false,
-  },
-];
+// const intialItems = [
+//   {
+//     Id: 1,
+//     description: "Passport",
+//     quantity: 2,
+//     packed: false,
+//   },
+//   {
+//     Id: 2,
+//     description: "Shocks",
+//     quantity: 2,
+//     packed: false,
+//   },
+//   {
+//     Id: 3,
+//     description: "Cloths",
+//     quantity: 2,
+//     packed: false,
+//   },
+//   {
+//     Id: 4,
+//     description: "Snacks",
+//     quantity: 2,
+//     packed: false,
+//   },
+// ];
 function App() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
+
+
+
 
   return (
     <div className="App">
       <Logo />
-      <Form mydata={setData} />
-      <PackingLists />
-      <States showdata={data} />
+      <Form formData={setData} />
+      <PackingLists packageData={data} />
+      <States stateData={data} />
 
     </div>
   );
@@ -50,7 +53,7 @@ function Logo() {
   );
 }
 
-function Form({ mydata }) {
+function Form({ formData }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(5);
 
@@ -63,7 +66,7 @@ function Form({ mydata }) {
       description, quantity, packed: false, id: Date.now()
     };
     // console.log(newItem);
-    mydata(newItem);
+    formData((oldformData) => [...oldformData, newItem]);
     setDescription("");
     setQuantity(1);
 
@@ -102,7 +105,6 @@ function Item({ item }) {
         className="listitem"
       >
         <span className="itemrow">
-          <input type="checkbox" />
           {item.description}
           {item.quantity}
         </span>{" "}
@@ -111,22 +113,21 @@ function Item({ item }) {
     </div>
   );
 }
-function PackingLists() {
+function PackingLists({ packageData }) {
   return (
     <div className="list">
       <h3 className="list-title text-center">List</h3>
       <ul className="listitem">
-        {intialItems.map((item) => (
+        {packageData.map((item) => (
           <Item item={item} key={item.Id} />
         ))}
       </ul>
     </div>
   );
 }
-function States({ showdata }) {
-  console.log("showdata", showdata)
+function States({ stateData }) {
   return (
-    <footer>You have {showdata.quantity} Items on your list,and you already packed {showdata.description}</footer>
+    <footer>You have {stateData.quantity} Items on your list,and you already packed {stateData.description}</footer>
   );
 }
 
