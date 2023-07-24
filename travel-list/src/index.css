@@ -31,6 +31,7 @@ h1 {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .itemrow {
   display: flex;
@@ -45,4 +46,10 @@ footer {
 .inputform {
   border-radius: 15px;
   background: rgb(254, 231, 171);
+}
+.listitem-check {
+  margin: 0 3px 0 0;
+}
+.close {
+  border-radius: 5px;
 }
