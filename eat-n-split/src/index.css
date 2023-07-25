@@ -38,3 +38,39 @@ body {
   border: none;
   cursor: pointer;
 }
+.form-Add-friends {
+  margin-left: 40px;
+  width: 30%;
+  background-color: rgb(253, 242, 225);
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.ADDbtn {
+  background-color: orange;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+}
+.closebtn {
+  background-color: orange;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0 0 40px;
+}
+.main-div-project {
+  display: flex;
+}
+.sidebar {
+  width: 40%;
+}
+.rightside {
+  width: 60%;
+}
+.green {
+  color: green;
+}
