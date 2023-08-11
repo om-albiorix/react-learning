@@ -1,11 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 import './index.css';
 import App from './App';
+import StarRating from "./StarRating";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Test = () => {
+  const [movieRating, setmovieRating] = useState(0);
+  return (
+    <div>
+      {
+        <StarRating
+          color="blue"
+          maxLength={10}
+          onsetRating={(rating) => setmovieRating(rating)}
+        />
+      }
+      <p>{movieRating}</p>
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 );
