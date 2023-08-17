@@ -18,7 +18,7 @@ export default function Option({ questions, answer, dispatch }) {
                 : ""
             }`}
             key={option}
-            disabled={answer !== null}
+            disabled={answer !== null}  
           >
             {console.log("answedsdsjdn", answer !== null)}
             {option}
