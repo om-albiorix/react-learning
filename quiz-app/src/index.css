@@ -126,6 +126,10 @@ progress {
   cursor: pointer;
   border-radius: 100px;
   transition: 0.3s;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 .btn:not([disabled]):hover {
@@ -140,9 +144,9 @@ progress {
   cursor: not-allowed;
 }
 
-.btn-ui {
+/* .btn-ui {
   float: right;
-}
+} */
 
 .options {
   display: flex;
@@ -256,4 +260,13 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+.center{
+  margin: auto;
+}
+.App{
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
