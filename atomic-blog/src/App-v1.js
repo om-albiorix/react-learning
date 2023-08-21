@@ -112,7 +112,9 @@ function Results() {
   return <p>🚀 {posts?.length} atomic posts found</p>;
 }
 
-function Main({ posts, onAddPost }) {
+function Main() {
+
+  
   return (
     <main>
       <FormAddPost onAddPost={onAddPost} />
