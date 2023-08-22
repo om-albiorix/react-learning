@@ -53,7 +53,6 @@ const useCities = () => {
   const context = useContext(CitiesContext);
   if (context === undefined)
     throw new Error("citiscontext was used  outside the CitiesProvider");
-  console.log({ context });
   return context;
 };
 
